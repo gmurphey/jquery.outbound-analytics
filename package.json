@@ -1,5 +1,5 @@
 {
-  "name": "jquery.Outbound-Analytics",
+  "name": "jquery.outbound-analytics",
   "title": "jQuery Outbound Analytics",
   "description": "A plugin aimed at making it easier to track outbound links with Google Analytics.",
   "version": "0.1.0",
