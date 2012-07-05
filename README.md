@@ -12,19 +12,13 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/jquery.Outbound-Analytics.min.js"></script>
+<script src="dist/jquery.outbound-analytics.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $.outboundAnalytics();
 });
 </script>
 ```
-
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
@@ -32,7 +26,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _Also, please don't edit files in the "dist" subdirectory as they are generated via grunt. You'll find source code in the "src" subdirectory!_
 
 ## Release History
-_(Nothing yet)_
+- *0.1.0*: Intial release.
 
 ## License
 Copyright (c) 2012 Garrett Murphey  
