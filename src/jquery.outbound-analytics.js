@@ -16,7 +16,7 @@
         settings = $.extend(defaults, options),
         isLocalHref = new RegExp("^https?://" + document.location.hostname);
 
-    $(this).find('a').filter(function () {
+    $(this).find('a[href]').filter(function () {
       return !$(this).attr('href').test(isLocalHref);
     }).click(function() {
       try {
