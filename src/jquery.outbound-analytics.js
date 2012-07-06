@@ -14,10 +14,10 @@
           "onError": function() { }
         },
         settings = $.extend(defaults, options),
-        isOutbound = new RegExp("^https?://" + document.location.hostname);
+        isLocalHref = new RegExp("^https?://" + document.location.hostname);
 
     $(this).find('a').filter(function () {
-      return !$(this).attr('href').test(isOutbound);
+      return !$(this).attr('href').test(isLocalHref);
     }).click(function() {
       try {
         gaObject.getTrackerByName()._trackEvent(settings.eventName, $(this).attr('href'));
