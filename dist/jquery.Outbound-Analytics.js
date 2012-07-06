@@ -1,4 +1,4 @@
-/*! jQuery Outbound Analytics - v0.1.0 - 2012-07-05
+/*! jQuery Outbound Analytics - v0.1.0 - 2012-07-06
 * https://github.com/gmurphey/jQuery.Outbound-Analytics
 * Copyright (c) 2012 Garrett Murphey; Licensed MIT, GPL */
 
@@ -10,10 +10,10 @@
           "onError": function() { }
         },
         settings = $.extend(defaults, options),
-        isOutbound = new RegExp("^https?://" + document.location.hostname);
+        isLocalHref = new RegExp("^https?://" + document.location.hostname);
 
     $(this).find('a').filter(function () {
-      return !$(this).attr('href').test(isOutbound);
+      return !$(this).attr('href').test(isLocalHref);
     }).click(function() {
       try {
         gaObject.getTrackerByName()._trackEvent(settings.eventName, $(this).attr('href'));
