@@ -1,6 +1,6 @@
-# jQuery Outbound Analytics
+# Outbound Analytics
 
-A plugin aimed at making it easier to track outbound links with Google Analytics.
+A jQuery plugin aimed at making it easier to track outbound links with Google Analytics.
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
