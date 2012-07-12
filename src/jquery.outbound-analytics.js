@@ -6,9 +6,11 @@
  * Licensed under the MIT, GPL licenses.
  */
 
+/*global _gaq: false*/
+
 (function($) {
 
-  $.fn.outboundAnalytics = function(gaObject, options) {
+  $.fn.outboundAnalytics = function(options) {
     var defaults = {
           "eventName": "Outbound Links",
           "onError": function() { }
@@ -20,7 +22,7 @@
       return !$(this).attr('href').test(isLocalHref);
     }).click(function() {
       try {
-        gaObject.getTrackerByName()._trackEvent(settings.eventName, $(this).attr('href'));
+        _gaq.getTrackerByName()._trackEvent(settings.eventName, $(this).attr('href'));
       } catch (e) {
         if (typeof(settings.onError) === 'function') {
           settings.onError.call(this, e);
@@ -29,8 +31,8 @@
     });
   };
 
-  $.outboundAnalytics = function(gaObject, options) {
-    $(document).outboundAnalytics(gaObject, options);
+  $.outboundAnalytics = function(options) {
+    $('body').outboundAnalytics(options);
   };
 
 }(jQuery));
