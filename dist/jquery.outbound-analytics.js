@@ -1,4 +1,4 @@
-/*! jQuery Outbound Analytics - v0.1.0 - 2012-07-11
+/*! jQuery Outbound Analytics - v0.1.0 - 2012-07-20
 * https://github.com/gmurphey/jquery.outbound-analytics
 * Copyright (c) 2012 Garrett Murphey; Licensed MIT, GPL */
 
@@ -8,23 +8,22 @@
 
   $.fn.outboundAnalytics = function(options) {
     var defaults = {
-          "eventName": "Outbound Links",
-          "onError": function() { }
+          'category': 'Outbound Links',
+          'action': 'Click',
+          'label': function () { return $(this).attr('href'); }
         },
         settings = $.extend(defaults, options),
-        isLocalHref = new RegExp("^https?://" + document.location.hostname);
+        isLocalHref = new RegExp("^" + document.location.origin);
 
-    $(this).find('a[href]').filter(function () {
-      return !$(this).attr('href').test(isLocalHref);
+    return this.find('a[href]').filter(function () {
+      return !isLocalHref.test(this.href);
     }).click(function() {
       try {
-        _gaq.getTrackerByName()._trackEvent(settings.eventName, $(this).attr('href'));
+        _gaq.push(['_trackEvent', settings.category, settings.action, settings.label, settings.value, settings.nonInteraction]);
       } catch (e) {
-        if (typeof(settings.onError) === 'function') {
-          settings.onError.call(this, e);
-        }
+        // do something in the future
       }
-    });
+    }).end().end();
   };
 
   $.outboundAnalytics = function(options) {
