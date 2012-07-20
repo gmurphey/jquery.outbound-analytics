@@ -12,11 +12,12 @@
 
   $.fn.outboundAnalytics = function(options) {
     var defaults = {
-          'category': 'Outbound Links',
-          'action': 'Click',
-          'label': function () { return $(this).attr('href'); }
+          category: 'Outbound Links',
+          action: 'Click',
+          label: function () { return $(this).attr('href'); },
+          nonInteraction: false
         },
-        settings = $.extend(defaults, options),
+        settings = $.extend({}, defaults, options),
         isLocalHref = new RegExp("^" + document.location.origin);
 
     return this.find('a[href]').filter(function () {
