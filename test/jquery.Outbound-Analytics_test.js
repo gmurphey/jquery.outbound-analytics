@@ -48,7 +48,7 @@ var _gaq = {
   test('only selects outbound links', function () {
     this.elems.outboundAnalytics().eq(0).find('a').click();
 
-    ok(_gaq.push.notCalled, 'should not be called on local links');
+    sinon.assert.notCalled(_gaq.push);
   });
 
   test('triggers event tracking on outbound link clicks', function () {
