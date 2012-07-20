@@ -56,4 +56,31 @@ var _gaq = {
 
     strictEqual(_gaq.push.callCount, 2, 'should track each outbound click');
   });
+
+  test('is called with default options', function () {
+    var defaultArgs = ['_trackEvent', 'Outbound Links', 'Click', 'https://github.com/', undefined, false];
+
+    this.elems.outboundAnalytics();
+    this.elems.eq(1).find('a').click();
+
+    sinon.assert.calledWith(_gaq.push, defaultArgs);
+
+    defaultArgs = ['_trackEvent', 'Outbound Links', 'Click', 'http://google.com/', undefined, false];
+    this.elems.eq(2).find('a').click();
+
+    sinon.assert.calledWith(_gaq.push, defaultArgs);
+  });
+
+  test('is called with custom options', function () {
+    var options = {
+      category: 'Outbound Affiliate',
+      label: function () { return $(this).text(); },
+      nonInteraction: true
+    }, expectedArgs = ['_trackEvent', 'Outbound Affiliate', 'Click', 'GitHub', undefined, true];
+
+    this.elems.outboundAnalytics(options);
+    this.elems.eq(1).find('a').click();
+
+    sinon.assert.calledWith(_gaq.push, expectedArgs);
+  });
 }(jQuery));
