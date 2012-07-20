@@ -9,6 +9,9 @@
   <!-- Load local QUnit (grunt requires v1.0.0 or newer). -->
   <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
   <script src="../libs/qunit/qunit.js"></script>
+  <!-- Load Sinon for API mocking -->
+  <script src="../libs/sinon/sinon.js"></script>
+  <script src="../libs/sinon/sinon-qunit.js"></script>
   <!-- Load local lib and tests. -->
   <script src="../src/jquery.Outbound-Analytics.js"></script>
   <script src="jquery.Outbound-Analytics_test.js"></script>
@@ -20,9 +23,9 @@
   <h2 id="qunit-userAgent"></h2>
   <ol id="qunit-tests"></ol>
   <div id="qunit-fixture">
-    <span>lame test markup</span>
-    <span>normal test markup</span>
-    <span>awesome test markup</span>
+    <div><a href="/">Root</a></div>
+    <div><a href="https://github.com/">Github</a></div>
+    <div><a href="http://google.com/">Google</a></div>
   </div>
 </body>
 </html>
