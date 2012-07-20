@@ -8,18 +8,25 @@
 
   $.fn.outboundAnalytics = function(options) {
     var defaults = {
-          'category': 'Outbound Links',
-          'action': 'Click',
-          'label': function () { return $(this).attr('href'); }
+          category: 'Outbound Links',
+          action: 'Click',
+          label: function () { return $(this).attr('href'); },
+          nonInteraction: false
         },
-        settings = $.extend(defaults, options),
+        settings = $.extend({}, defaults, options),
         isLocalHref = new RegExp("^" + document.location.origin);
 
     return this.find('a[href]').filter(function () {
       return !isLocalHref.test(this.href);
     }).click(function() {
+      var params = {}, link = this;
+
+      $.each(settings, function (key, value) {
+        params[key] = ($.isFunction(value)) ? value.call(link) : value;
+      });
+
       try {
-        _gaq.push(['_trackEvent', settings.category, settings.action, settings.label, settings.value, settings.nonInteraction]);
+        _gaq.push(['_trackEvent', params.category, params.action, params.label, params.value, params.nonInteraction]);
       } catch (e) {
         // do something in the future
       }
