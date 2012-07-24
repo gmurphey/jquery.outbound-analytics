@@ -17,11 +17,10 @@
           label: function () { return $(this).attr('href'); },
           nonInteraction: false
         },
-        settings = $.extend({}, defaults, options),
-        isLocalHref = new RegExp("^" + document.location.origin);
+        settings = $.extend({}, defaults, options);
 
     return this.find('a[href]').filter(function () {
-      return !isLocalHref.test(this.href);
+      return (this.host !== location.host);
     }).click(function() {
       var params = {}, link = this;
 

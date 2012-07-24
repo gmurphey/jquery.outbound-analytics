@@ -1,4 +1,4 @@
-/*! jQuery Outbound Analytics - v0.1.0 - 2012-07-20
+/*! jQuery Outbound Analytics - v0.1.1 - 2012-07-24
 * https://github.com/gmurphey/jquery.outbound-analytics
 * Copyright (c) 2012 Garrett Murphey; Licensed MIT, GPL */
 
@@ -13,11 +13,10 @@
           label: function () { return $(this).attr('href'); },
           nonInteraction: false
         },
-        settings = $.extend({}, defaults, options),
-        isLocalHref = new RegExp("^" + document.location.origin);
+        settings = $.extend({}, defaults, options);
 
     return this.find('a[href]').filter(function () {
-      return !isLocalHref.test(this.href);
+      return (this.host !== location.host);
     }).click(function() {
       var params = {}, link = this;
 

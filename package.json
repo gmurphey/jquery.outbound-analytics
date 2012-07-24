@@ -2,7 +2,7 @@
   "name": "jquery.outbound-analytics",
   "title": "jQuery Outbound Analytics",
   "description": "A jQuery plugin aimed at making it easier to track outbound links with Google Analytics.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/gmurphey/jquery.outbound-analytics",
   "author": {
     "name": "Garrett Murphey",
