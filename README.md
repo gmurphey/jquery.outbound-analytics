@@ -36,7 +36,7 @@ jQuery(function($) {
   $('header').outboundAnalytics();
 
   // track <aside> links as 'Reference Links'
-  $('aside').outboundAnalytics({ 'eventName': 'Reference Links' });
+  $('aside').outboundAnalytics({ 'category': 'Reference Links' });
 });
 </script>
 ```
