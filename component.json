@@ -1,0 +1,8 @@
+{
+  "name": "jquery.outbound-analytics",
+  "version": "0.1.1",
+  "main": "./dist/jquery.outbound-analytics.js",
+  "dependencies": {
+    "jquery": "~1.7"
+  }
+}
