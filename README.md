@@ -5,8 +5,8 @@ A jQuery plugin aimed at making it easier to track outbound links with Google An
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/gmurphey/jquery.Outbound-Analytics/master/dist/jquery.Outbound-Analytics.min.js
-[max]: https://raw.github.com/gmurphey/jquery.Outbound-Analytics/master/dist/jquery.Outbound-Analytics.js
+[min]: https://raw.github.com/gmurphey/jquery.outbound-analytics/master/dist/outbound-analytics.jquery.js.min.js
+[max]: https://raw.github.com/gmurphey/jquery.outbound-analytics/master/dist/outbound-analytics.jquery.js.js
 
 ### The Basics
 
@@ -41,15 +41,6 @@ jQuery(function($) {
 </script>
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
-
-_Also, please don't edit files in the "dist" subdirectory as they are generated via grunt. You'll find source code in the "src" subdirectory!_
-
 ## Release History
 - *0.1.1*: Improving external link detection.
 - *0.1.0*: Intial release.
-
-## License
-Copyright (c) 2012 Garrett Murphey
-Licensed under the MIT, GPL licenses.

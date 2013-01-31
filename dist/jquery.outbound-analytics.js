@@ -1,8 +1,6 @@
-/*! jQuery Outbound Analytics - v0.1.1 - 2012-07-24
+/*! Outbound Analytics - v0.1.1 - 2013-01-31
 * https://github.com/gmurphey/jquery.outbound-analytics
-* Copyright (c) 2012 Garrett Murphey; Licensed MIT, GPL */
-
-/*global _gaq: false*/
+* Copyright (c) 2013 Garrett Murphey; Licensed MIT */
 
 (function($) {
 

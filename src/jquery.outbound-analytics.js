@@ -1,11 +1,3 @@
-/*
- * jquery.Outbound-Analytics
- * https://github.com/gmurphey/jQuery.Outbound-Analytics
- *
- * Copyright (c) 2012 Garrett Murphey
- * Licensed under the MIT, GPL licenses.
- */
-
 /*global _gaq: false*/
 
 (function($) {

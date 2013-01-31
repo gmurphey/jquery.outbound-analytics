@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    pkg: '<json:package.json>',
+    pkg: '<json:outbound-analytics.jquery.json>',
     meta: {
       banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
@@ -24,11 +24,7 @@ module.exports = function(grunt) {
       }
     },
     qunit: {
-      all: ['http://localhost:8000/test/jquery.Outbound-Analytics.html']
-    },
-    server: {
-      port: 8000,
-      base: '.'
+      files: ['test/**/*.html']
     },
     lint: {
       files: ['grunt.js', 'src/**/*.js', 'test/**/*.js']
@@ -59,6 +55,6 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint server qunit concat min');
+  grunt.registerTask('default', 'lint qunit concat min');
 
 };
