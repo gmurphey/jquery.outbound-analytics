@@ -25,5 +25,5 @@
   "dependencies": {
     "jquery": "1.5"
   },
-  "keywords": []
+  "keywords": ["analytics", "google", "tracking"]
 }
