@@ -13,14 +13,14 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:src/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['<banner:meta.banner>', '<file_strip_banner:src/jquery.<%= pkg.name %>.js>'],
+        dest: 'dist/jquery.<%= pkg.name %>.js'
       }
     },
     min: {
       dist: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'dist/jquery.<%= pkg.name %>.min.js'
       }
     },
     qunit: {
