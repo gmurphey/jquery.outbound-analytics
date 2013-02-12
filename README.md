@@ -2,6 +2,8 @@
 
 A jQuery plugin aimed at making it easier to track outbound links with Google Analytics.
 
+[![Build Status](https://travis-ci.org/gmurphey/jquery.outbound-analytics.png)](https://travis-ci.org/gmurphey/jquery.outbound-analytics)
+
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
