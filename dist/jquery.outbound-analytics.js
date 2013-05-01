@@ -1,7 +1,10 @@
-/*! Outbound Analytics - v0.1.3 - 2013-01-31
-* https://github.com/gmurphey/jquery.outbound-analytics
-* Copyright (c) 2013 Garrett Murphey; Licensed MIT */
+/*
+Outbound Analytics - v0.1.4 - 2013-05-01
+http://gmurphey.com/2012/07/22/jquery-plugin-outbound-analytics.html 
+Copyright (c) 2013 Garrett Murphey; Licensed MIT
+*/
 
+/*global _gaq: false*/
 (function($) {
 
   $.fn.outboundAnalytics = function(options) {

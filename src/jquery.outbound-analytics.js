@@ -1,5 +1,4 @@
 /*global _gaq: false*/
-
 (function($) {
 
   $.fn.outboundAnalytics = function(options) {
